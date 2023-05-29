@@ -1,0 +1,21 @@
+body{background-color:#e6e9ea;font-family:Arial;}
+
+#container{position:relative;z-index:100;display:block;overflow:visible;margin:4px auto;width:980px;background-color:white;-webkit-box-shadow:0 2px 10px #aaa;-moz-box-shadow:0 2px 10px #aaa;box-shadow:0 2px 10px #aaa}
+
+.head{padding:30px 40px 15px 40px;font-size:32px;font-weight:bold;}
+.logo{padding:20px 30px 0px 30px;}
+
+menu{position:relative;margin:17px 0 5px;padding:10px 40px 10px 40px;border-top:4px solid;border-color:#2c6bb8;font-size:15px;background-color:#d1e7ff;height:35px}
+menu a {color:black;float: left;display: block;text-decoration: none;line-height: 35px;font-size:17px;padding: 0 1.2em;}
+menu a:hover {background-color:#CF0;padding-right: 1.2em;text-decoration: none;}
+
+.banner{position:relative;margin:10px 0 0px;padding:20px 40px 15px 40px;border-top:4px solid;border-color:#2c6bb8;font-size:15px;background-color:#d1e7ff;}
+.banner p{margin:0 0 7px;}
+
+#content{padding:10px 0 20px;overflow:visible;border-bottom:1px dotted #ccc;position:relative;display:block;clear:both;overflow:hidden;margin:0 auto;width:auto;background:white;}
+.content-module1{padding:10px 50px 10px 50px;font-size:16px;line-height: 22px;}
+.content-module2{padding:10px 50px 10px 50px;font-size:15px;line-height: 22px;}
+
+.footer{padding:16px;background-color:#1a87d7;font-size:14px;}.footer p{margin:1px  0 7px;color:white}.footer a{color:#eaeaea}.footer .logo{float:right;margin-top:2px}
+
+.red {color: #F00;}

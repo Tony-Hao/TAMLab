@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>PCCCP 專業級中文簡繁轉換平臺</title>
+    <link href="Styles/header3.0.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body
+        {
+            background-color: #fdfeff;
+        }
+        #header{ position:relative; width:990px; height:140px; margin:auto; background:url(images/header/header.jpg) no-repeat scroll 0 0; }
+        #footer
+        {
+            font-size: 12px;
+            width: 100%;
+            height: 59px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #333333;
+            padding-top: 25px;
+            line-height: 1.6em;
+            background: #f2f2f2 url(images/index/footer_back.gif) repeat-x;
+        }
+        #footer a
+        {
+            color: #333333;
+            text-decoration: none;
+        }
+        #footer a:hover
+        {
+            text-decoration: underline;
+        }
+        #main
+        {
+            width: 989px;
+            margin: auto;
+            position: relative;
+        }
+        #poster
+        {
+            width: 989px;
+            height: 311px;
+            background: url(images/index/poster.jpg);
+            position: relative;
+        }
+        #content
+        {
+	width: 989px;
+	margin-top: 15px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #595959;
+        }
+        #download
+        {
+	position: absolute;
+	width: 139px;
+	height: 66px;
+	cursor: pointer;
+	display: block;
+	top: 230px;
+	left: 433px;
+	overflow: hidden;
+        }
+        #download a
+        {
+            color: #ffffff;
+            font-size: 12px;
+            position: absolute;
+            top: 0px;
+            width: 146px;
+            height: 32px;
+            display: block;
+            text-decoration: none;
+            padding-top: 34px;
+            padding-left: 47px;
+            position: absolute;
+            font-family: "宋体";
+        }
+        .poster_url
+        {
+            position: absolute;
+            display: block;
+            left: 730px;
+            top: 260px;
+            width: 210px;
+            height: 18px;
+        }
+        #left_content
+        {
+            width: 667px;
+            position: relative;
+        }
+        #right_content
+        {
+            width: 322px;
+            left: 667px;
+            position: relative;
+        }
+        #what_new
+        {
+	position: absolute;
+	width: 989px;
+	top: 0;
+	left: 0;
+        }
+        #what_new div
+        {
+	width: 883px;
+	height: 262px;
+	position: absolute;
+	color: #595959;
+	font-size: 12px;
+	line-height: 24px;
+        }
+        #what_new div a
+        {
+            color: #78a700;
+        }
+        #msg_box
+        {
+	left: 35px;
+	top: 34px;
+        }
+        #dual_core
+        {
+	left: 631px;
+	top: 101px;
+        }
+        #speed_up
+        {
+	left: 129px;
+	top: 306px;
+        }
+        #skin_box
+        {
+	left: 631px;
+	top: 306px;
+        }
+        #net_safe
+        {
+	left: 35px;
+	top: 321px;
+        }
+        #cloud_passport
+        {
+	left: 631px;
+	top: 488px;
+        }
+        #features
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 322px;
+            height: 348px;
+            background: url(images/index/right_features.jpg);
+        }
+        #features div
+        {
+            position: absolute;
+            left: 109px;
+            color: #595959;
+            font-size: 12px;
+        }
+        #f1
+        {
+            top: 78px;
+        }
+        #f2
+        {
+            top: 136px;
+        }
+        #f3
+        {
+            top: 194px;
+        }
+        #f4
+        {
+            top: 253px;
+        }
+        #f5
+        {
+            top: 309px;
+        }
+        #faq
+        {
+            position: absolute;
+            width: 647px;
+            height: 191px;
+            top: 620px;
+            left: 0;
+            background: url(images/index/faq.jpg);
+        }
+        #new_atcive
+        {
+            position: absolute;
+            padding-top: 44px;
+            top: 355px;
+            left: 0;
+            width: 320px;
+            height: 101px;
+            background: url(images/index/new_atcive.jpg) no-repeat;
+        }
+        .more
+        {
+            font-size: 12px;
+            position: absolute;
+            top: 15px;
+            left: 248px;
+        }
+        .more a
+        {
+            color: #78a700;
+            text-decoration: none;
+        }
+        #new_atcive li, #bbs_active li, #faq_left li
+        {
+            display: block;
+            width: 290px;
+            height: 22px;
+            background: url(images/index/list_node.jpg) no-repeat 12px 0;
+            color: #595959;
+            font-size: 12px;
+            list-style: none;
+            padding: 4px 0 0 30px;
+        }
+        #new_atcive li a, #bbs_active li a, #faq_left li a
+        {
+            color: #595959;
+            text-decoration: none;
+        }
+        #bbs_active
+        {
+            padding-top: 44px;
+            position: absolute;
+            top: 500px;
+            left: 0;
+            width: 320px;
+            height: 221px;
+            background: url(/images/index/bbs.jpg) no-repeat;
+        }
+        #coop
+        {
+	width: 839px;
+	height: 78px;
+	background: url(/images/index/coop.jpg) no-repeat;
+	position: relative;
+	padding-left: 300px;
+	padding-top: 7px;
+        }
+        #coop img
+        {
+	float: left;
+	margin-right: 30px;
+        }
+        #faq_left
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 10px;
+            top: 70px;
+        }
+        #faq_left
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 10px;
+            top: 70px;
+        }
+        #faq_right
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 400px;
+            top: 80px;
+            color: #595959;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #faq_right a
+        {
+            color: #595959;
+            font-size: 12px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body >
+    <div id="header">
+        <div id="nav_bar">
+            <ul>
+              <li id="index" class="active"><a href="index.html"></a></li>
+              <li id="sext" class="active"><a href="version.html"></a></li>
+              <li id="skin" class="active"><a href="help.pdf"></a></li>
+              <li id="lab" class="active"><a href="FAQ.html"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+      <div id="poster">
+<div id="download"><a href="version.html"></a></div>
+
+</div>
+      <div id="content">
+    <div id="left_content">
+              <div id="what_new"></div>
+</div>
+        <p>================================================================<br />
+        Q：系統支持哪些類型的文件轉換？</p>
+        <p> A: 只能直接讀取txt文本文件或直接粘貼文本到左側窗口，粘貼時可保留word文檔的格式。</p>
+        <p>&nbsp;</p>
+        <p> Q: 如何進行簡繁轉換？</p>
+        <p> A：首先導入待轉換文本，有兩種方式：其一：複製文本，並粘貼到左側面板；其二：點擊【讀取文件】按鈕選擇並導入待轉換文件到左側面板。然後單擊【簡-&gt;繁】或者【繁-&gt;簡】按鈕進行簡繁轉換，轉換結果顯示在右側，以不同顏色區分轉換過的字符，綠色為一對一轉換結果，黃色為一對多轉換結果。單擊右上側的【另存為】按鈕可將右側轉換結果保存到用戶指定位置。</p>
+        <p>&nbsp;</p>
+        <p>Q: 如何使用高級手動校正功能？</p>
+        <p> A: 選中【高級手動轉換】複選框，隨後，點擊處彈出一個包含多個數據源的窗口，用戶根據需要選擇其中的單個或者多個數據源，然後點擊【簡-&gt;繁】或者【繁-&gt;簡】按鈕。轉換結果已使用顏色進行區分，比如綠色為機器自動一對一字符轉換結果（該部分準確率極高，高於99.8%，一般不需要用戶確認），黃色為機器自動一對多字符轉換結果（該部分準確率為91.5%，需要用戶校正）。用戶可以對轉換結果進行快速校正，比如用戶發現一處錯誤，可以點擊該字符或者單詞，該內容附近即彈出一個校對窗口，用戶可以從下拉菜單中選擇正確的字符（如有）或者直接手工填寫，如果用戶不確定正確性，可以點擊搜索圖標，系統自動會鏈接到百度字典進行確認(http://dict.baidu.com)。同時，該窗口包含2個選項：更新所有相同情況、加入個人詞典。更新所有相同情況表示所有相同錯誤將用相同的方式進行自動批量校正，結果用藍色表示；加入個人詞典表示用戶的當次校正及正確結果將會自動加入用戶詞典防止下次出現相同的轉換錯誤。當用戶完成校正後，可以使用取消顏色功能取消特定顏色，或者取消全部顏色以得到最後結果。</p>
+        <p>&nbsp;</p>
+        <p>Q: 如何使用數據源管理模塊？</p>
+        <p> A: 點擊【詞典管理(D)】? 【詞典管理】，選中待管理的詞典，單擊【讀取】按鈕，待系統列出選中詞典已有的所有詞條後，用戶可進行增刪改操作。如果需要修改某詞條，首先選中該詞條，然後在下方的擴大顯示欄中對該詞條的內容進行編輯，然後單擊【保存】按鈕，可完成對詞條的修改。如需新增詞條，單擊【添加】按鈕，為詞條列表新增一條Term=Term1/Term2，並自動選中該詞條，用戶在下方的擴大顯示欄中對該詞條進行編輯，編輯完畢後，單擊【保存】按鈕，即完成新詞條的插入。如需刪除詞條，選中某一詞條，然後單擊【刪除】按鈕，可刪除該詞條。操作完畢後，單擊【保存】將更新詞典內容，單擊【另存為】可將經過修改的詞典存儲到用戶指定的其他位置。</p>
+        <p>&nbsp;</p>
+        <p>Q: 如何使用轉換結果對比功能？</p>
+        <p> A: 點擊【轉換結果比較(C)】，為彈出窗口的左側和右側分別讀入待比較的轉換結果，然後單擊【比較】按鈕，對結果進行比較並在下側輸出報告，報告左側列出不同的字符轉換結果對，右側給出統計值。如果比較前選中了【統計一對多情況】複選框，則報告中會給出一對多轉換的統計結果。</p>
+        <p>&nbsp;</p>
+        <p>Q：語料庫訓練模塊的功能是什麼？</p>
+        <p> A：為用戶提供從自己的語料庫中批量訓練N-Gram的功能。</p>
+        <p>&nbsp;</p>
+        <p>Q：如何使用語料庫訓練模塊的功能？</p>
+        <p> A：單擊【語料庫訓練(T)】，彈出語料庫訓練窗口，單擊【導入語料文件】按鈕，選擇待訓練的原始語料文件，注意該訓練語料需為繁體中文語料，因為該N-Gram 主要用於從簡體到繁體的轉換。<br />
+          訓練的過程可以基於原來的訓練結果或者開始一個全新的訓練，用戶可以管理獲取的N-Grams或者合併不同的訓練結果，為用戶提供更多的方便性和靈活性。同時，系統提供了一個對訓練結果的測試對比功能（在右側窗口）。用戶可以選擇最大逆向匹配、最大逆向匹配+N-Gram、最大逆向匹配+N-Gram +模版、微軟Office 2010。每種方法對文本進行處理的結果和相應的運行時間顯示在窗口右下，有助於用戶全面分析測試結果和程序運行效率。</p>
+        <p>&nbsp;</p>
+        <p>Q：模板學習模塊的功能是什麼？</p>
+        <p> A：為用戶提供從自己的語料中訓練學習模板的功能。</p>
+        <p>&nbsp;</p>
+        <p>Q：如何使用模板學習模塊？</p>
+        <p> A：單擊【模板學習(P)】，彈出模板學習窗口，單擊【導入語料文件】按鈕，選擇待學習語料，用戶可以一次性導入多個繁體的訓練文本，然後單擊【生成侯選集】按鈕，即可生成左下角的轉換模版候選集。用戶可以設定支持度和信心度，進行基於支持度和信心度的候選集過濾，得到的合適的模版，可以再通過&quot;根據最大覆蓋度合併獲取最終模版&quot;來合併並獲取最終模版。該訓練和學習過程允許用戶運行和操作每個步驟，並具體控制和調整參數。<br />
+        </p>
+<p align="center">&nbsp;</p>
+        <p><br />
+        </p>
+      </div>
+        <div id="coop">
+          <p><a href="http://www.cityu.edu.hk"
+                        target="_blank"><img src="images/index/logo_cityu_home.png" width="95" height="41" style="width: 90px;" /></a><a href="http://www.cityu.edu.hk/class/" target="_blank"><img src="images/index/CLASS.gif" width="166" height="30"></a><a href="http://ctl.cityu.edu.hk/"
+                    target="_blank"><img src="images/index/CTL.gif" width="130" height="34"></a></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+</body>
+</html>

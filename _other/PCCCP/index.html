@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>PCCCP 專業級中文簡繁轉換平臺</title>
+    <link href="Styles/header3.0.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body
+        {
+            background-color: #fdfeff;
+        }
+        #header{ position:relative; width:990px; height:140px; margin:auto; background:url(images/header/header.jpg) no-repeat scroll 0 0; }
+        #footer
+        {
+            font-size: 12px;
+            width: 100%;
+            height: 59px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #333333;
+            padding-top: 25px;
+            line-height: 1.6em;
+            background: #f2f2f2 url(images/index/footer_back.gif) repeat-x;
+        }
+        #footer a
+        {
+            color: #333333;
+            text-decoration: none;
+        }
+        #footer a:hover
+        {
+            text-decoration: underline;
+        }
+        #main
+        {
+            width: 989px;
+            margin: auto;
+            position: relative;
+        }
+        #poster
+        {
+            width: 989px;
+            height: 311px;
+            background: url(images/index/poster.jpg);
+            position: relative;
+        }
+        #content
+        {
+	width: 989px;
+	height: 630px;
+	margin-top: 15px;
+        }
+        #download
+        {
+	position: absolute;
+	width: 139px;
+	height: 66px;
+	cursor: pointer;
+	display: block;
+	top: 230px;
+	left: 433px;
+	overflow: hidden;
+        }
+        #download a
+        {
+            color: #ffffff;
+            font-size: 12px;
+            position: absolute;
+            top: 0px;
+            width: 146px;
+            height: 32px;
+            display: block;
+            text-decoration: none;
+            padding-top: 34px;
+            padding-left: 47px;
+            position: absolute;
+            font-family: "宋体";
+        }
+        .poster_url
+        {
+            position: absolute;
+            display: block;
+            left: 730px;
+            top: 260px;
+            width: 210px;
+            height: 18px;
+        }
+        #left_content
+        {
+            width: 667px;
+            position: relative;
+        }
+        #right_content
+        {
+            width: 322px;
+            left: 667px;
+            position: relative;
+        }
+        #what_new
+        {
+	position: absolute;
+	width: 989px;
+	height: 604px;
+	top: 0;
+	left: 0;
+	background: url(images/index/what_new.jpg);
+        }
+        #what_new div
+        {
+	width: 350px;
+	height: 102px;
+	position: absolute;
+	color: #595959;
+	font-size: 12px;
+	line-height: 24px;
+        }
+        #what_new div a
+        {
+            color: #78a700;
+        }
+        #msg_box
+        {
+	left: 117px;
+	top: 101px;
+        }
+        #dual_core
+        {
+	left: 625px;
+	top: 101px;
+        }
+        #speed_up
+        {
+	left: 117px;
+	top: 306px;
+        }
+        #skin_box
+        {
+	left: 625px;
+	top: 306px;
+        }
+        #net_safe
+        {
+	left: 117px;
+	top: 488px;
+        }
+        #cloud_passport
+        {
+	left: 625px;
+	top: 488px;
+        }
+        #features
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 322px;
+            height: 348px;
+            background: url(images/index/right_features.jpg);
+        }
+        #features div
+        {
+            position: absolute;
+            left: 109px;
+            color: #595959;
+            font-size: 12px;
+        }
+        #f1
+        {
+            top: 78px;
+        }
+        #f2
+        {
+            top: 136px;
+        }
+        #f3
+        {
+            top: 194px;
+        }
+        #f4
+        {
+            top: 253px;
+        }
+        #f5
+        {
+            top: 309px;
+        }
+        #faq
+        {
+            position: absolute;
+            width: 647px;
+            height: 191px;
+            top: 620px;
+            left: 0;
+            background: url(images/index/faq.jpg);
+        }
+        #new_atcive
+        {
+            position: absolute;
+            padding-top: 44px;
+            top: 355px;
+            left: 0;
+            width: 320px;
+            height: 101px;
+            background: url(images/index/new_atcive.jpg) no-repeat;
+        }
+        .more
+        {
+            font-size: 12px;
+            position: absolute;
+            top: 15px;
+            left: 248px;
+        }
+        .more a
+        {
+            color: #78a700;
+            text-decoration: none;
+        }
+        #new_atcive li, #bbs_active li, #faq_left li
+        {
+            display: block;
+            width: 290px;
+            height: 22px;
+            background: url(images/index/list_node.jpg) no-repeat 12px 0;
+            color: #595959;
+            font-size: 12px;
+            list-style: none;
+            padding: 4px 0 0 30px;
+        }
+        #new_atcive li a, #bbs_active li a, #faq_left li a
+        {
+            color: #595959;
+            text-decoration: none;
+        }
+        #bbs_active
+        {
+            padding-top: 44px;
+            position: absolute;
+            top: 500px;
+            left: 0;
+            width: 320px;
+            height: 221px;
+            background: url(/images/index/bbs.jpg) no-repeat;
+        }
+        #coop
+        {
+	width: 839px;
+	height: 78px;
+	background: url(/images/index/coop.jpg) no-repeat;
+	position: relative;
+	padding-left: 300px;
+	padding-top: 7px;
+        }
+        #coop img
+        {
+	float: left;
+	margin-right: 30px;
+        }
+        #faq_left
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 10px;
+            top: 70px;
+        }
+        #faq_left
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 10px;
+            top: 70px;
+        }
+        #faq_right
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 400px;
+            top: 80px;
+            color: #595959;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #faq_right a
+        {
+            color: #595959;
+            font-size: 12px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body >
+    <div id="header">
+        <div id="nav_bar">
+            <ul>
+              <li id="index" class="active"><a href="index.html"></a></li>
+              <li id="sext" class="active"><a href="version.html"></a></li>
+              <li id="skin" class="active"><a href="help.pdf"></a></li>
+              <li id="lab" class="active"><a href="FAQ.html"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+      <div id="poster">
+<div id="download"><a href="version.html"></a></div>
+</div>
+      <div id="content">
+            <div id="left_content">
+                <div id="what_new">
+                    <div id="msg_box">具有先進的基於多數據源的簡繁轉換功能，加上使用改進的N-Gram語言模型和大規模語料訓練、自學習的中文轉換模板，轉換精度空前提高，在與Google、Word2010及其他當前流行轉換軟件的對比中，本軟件取得第一名的最好成績。<br />
+            </div>
+                    <div id="dual_core">
+                      <p>用戶可以使用領域文本進行大規模詞庫訓練，以使系統學習N-Gram和模板。該訓練可以批量進行，可以諸如報紙、文獻等數據進行批量處理，並可以詳細調節學習參數，以達到最優效果。</p>
+                      <p>&nbsp;</p>
+                </div>
+                    <div id="speed_up">本平臺提供一鍵自動轉換功能，方便普通用戶。同時提供高級修訂模式，用戶可以自行選擇數據源，可以使用步進模式，可以批量對單字進行校訂，並提供詳細的轉換依據，高度定制化加上權威的數據為用戶提供專業級校訂服務。</div>
+<div id="skin_box">具有基於優先級的多數據源管理功能。提供手動修改模式，並允許用戶自行添加維護自定義詞典，該詞典具有最好優先級。提供台灣、香港等本地化詞庫，使得轉換更具人性化、更加滿足用戶需求。</div>
+                  <div id="net_safe">
+                    <p>友好的用戶操作界面，使用多種顏色顯示不同轉換，綠色為單字轉換，黃色為一對多轉換，灰色為標點符號，藍色為用戶自定義，不同顏色為校訂提供快速有效的標記，使用戶能快速定位以進行不同操作。</p>
+</div>
+                    <div id="cloud_passport">本平臺提供3種語言，並可以在不同語言間自由切換，以滿足不同用戶。轉換過程完整保留原有格式，讓用戶可以對word文檔一次性轉換而不需要再次排版，並可以將轉換結果保存為word格式或者純文本格式。</div>
+                </div>
+</div>
+      </div>
+        <div id="coop">
+          <p><a href="http://www.cityu.edu.hk"
+                        target="_blank"><img src="images/index/logo_cityu_home.png" width="95" height="41" style="width: 90px;" /></a><a href="http://www.cityu.edu.hk/class/" target="_blank"><img src="images/index/CLASS.gif" width="166" height="30"></a><a href="http://ctl.cityu.edu.hk/"
+                    target="_blank"><img src="images/index/CTL.gif" width="130" height="34"></a></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+</body>
+</html>

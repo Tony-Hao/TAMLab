@@ -1,0 +1,78 @@
+body { background:url(images/header/body_back.jpg) repeat-x ; }
+
+#title{ position:absolute; width:203px; height:40px; top:31px; left:119px; }
+#products{ position:absolute; width:430px; height:33px; top:0px; left:540px;}
+#products ul li{ position:absolute; float:left; display:block; cursor:pointer; height:20px; top:3px; }
+#products ul li a{display:block;height:20px}
+#pinyin{ width:80px; left:34px; }
+#wubi{ width:80px; left:145px; }
+#mobile{ width:90px; left:248px; }
+#music{ width:58px; left:361px; }
+#nav_bar{
+	position:absolute;
+	width:700px;
+	height:50px;
+	top:80px;
+	left:116px;
+}
+#nav_bar ul{ position:relative; }
+#nav_bar li{
+	height:30px;
+	position:absolute;
+	float:left;
+	display:block;
+	cursor:pointer;
+	top: 1px;
+}
+#nav_bar ul li a{
+	display:block;
+	height:48px;
+	width:100px
+}
+#index{ left:6px;}
+#func{left:100px; }
+#sext{left:188px; }
+#skin{left:282px; }
+#lab{left:375px; }
+#bbs{left:468px; }
+#log{left:560px; }
+#help{left:653px; }
+#index.active{
+	background:url(images/header/header.jpg) no-repeat scroll 0px -153px;
+	width:89px;
+	left:98px
+}
+#bbs.active{background:url(images/header/header.jpg) no-repeat scroll -461px -153px;width:88px;left:461px}
+#log.active{background:url(images/header/header.jpg) no-repeat scroll -553px -153px;width:88px;left:553px}
+#help.active{background:url(images/header/header.jpg) no-repeat scroll -647px -153px;width:88px;left:647px}
+#lab.active{
+	background:url(images/header/header.jpg) no-repeat scroll -369px -153px;
+	width:88px;
+	left:441px
+}
+#func.active{
+	background:url(images/header/header.jpg) no-repeat scroll -94px -153px;
+	width:88px;
+	left:222px
+}
+#sext.active{
+	background:url(images/header/header.jpg) no-repeat scroll -185px -153px;
+	width:88px;
+	left:209px
+}
+#skin.active{
+	background:url(images/header/header.jpg) no-repeat scroll -277px -153px;
+	width:88px;
+	left:323px
+}
+
+#nav_member{ position:absolute; left:860px; width:260px;height:47px; top:79px;}
+#nav_member ul{ position:relative; }
+#nav_member li{ height:47px; position:absolute; float:left; display:block; cursor:pointer; }
+#nav_member ul li a{text-decoration:none;color:#4990bd;}
+#loginbtn{ left:0px;top:6px; width:48px; height:28px; text-align:center; background:url(images/header/header.jpg) no-repeat scroll -942px -172px; }
+#loginbtn a{padding-top:6px;height:20px;display:block}
+#regbtn{ top:6px; left:60px; width:48px; height:28px; text-align:center; background:url(images/header/header.jpg) no-repeat scroll -942px -172px;}
+#regbtn a{padding-top:6px;height:20px;display:block}
+#welcomeinfo{left:0px; top:15px;height:20px;width:200px;}
+#nav_member #welcomeinfo a{ padding-top:13px; left:0px; width:200px;display:inline;color:#000}

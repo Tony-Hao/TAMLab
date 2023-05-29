@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>PCCCP 專業級中文簡繁轉換平臺</title>
+    <link href="Styles/header3.0.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body
+        {
+            background-color: #fdfeff;
+        }
+        #header{ position:relative; width:990px; height:140px; margin:auto; background:url(images/header/header.jpg) no-repeat scroll 0 0; }
+        #footer
+        {
+            font-size: 12px;
+            width: 100%;
+            height: 59px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #333333;
+            padding-top: 25px;
+            line-height: 1.6em;
+            background: #f2f2f2 url(images/index/footer_back.gif) repeat-x;
+        }
+        #footer a
+        {
+            color: #333333;
+            text-decoration: none;
+        }
+        #footer a:hover
+        {
+            text-decoration: underline;
+        }
+        #main
+        {
+            width: 989px;
+            margin: auto;
+            position: relative;
+        }
+        #poster
+        {
+            width: 989px;
+            height: 311px;
+            background: url(images/index/poster.jpg);
+            position: relative;
+        }
+        #content
+        {
+	width: 989px;
+	margin-top: 15px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #595959;
+        }
+        #download
+        {
+	position: absolute;
+	width: 139px;
+	height: 66px;
+	cursor: pointer;
+	display: block;
+	top: 230px;
+	left: 433px;
+	overflow: hidden;
+        }
+        #download a
+        {
+            color: #ffffff;
+            font-size: 12px;
+            position: absolute;
+            top: 0px;
+            width: 146px;
+            height: 32px;
+            display: block;
+            text-decoration: none;
+            padding-top: 34px;
+            padding-left: 47px;
+            position: absolute;
+            font-family: "宋体";
+        }
+        .poster_url
+        {
+            position: absolute;
+            display: block;
+            left: 730px;
+            top: 260px;
+            width: 210px;
+            height: 18px;
+        }
+        #left_content
+        {
+            width: 667px;
+            position: relative;
+        }
+        #right_content
+        {
+            width: 322px;
+            left: 667px;
+            position: relative;
+        }
+        #what_new
+        {
+	position: absolute;
+	width: 989px;
+	top: 0;
+	left: 0;
+        }
+        #what_new div
+        {
+	width: 883px;
+	height: 262px;
+	position: absolute;
+	color: #595959;
+	font-size: 12px;
+	line-height: 24px;
+        }
+        #what_new div a
+        {
+            color: #78a700;
+        }
+        #msg_box
+        {
+	left: 35px;
+	top: 34px;
+        }
+        #dual_core
+        {
+	left: 631px;
+	top: 101px;
+        }
+        #speed_up
+        {
+	left: 129px;
+	top: 306px;
+        }
+        #skin_box
+        {
+	left: 631px;
+	top: 306px;
+        }
+        #net_safe
+        {
+	left: 35px;
+	top: 321px;
+        }
+        #cloud_passport
+        {
+	left: 631px;
+	top: 488px;
+        }
+        #features
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 322px;
+            height: 348px;
+            background: url(images/index/right_features.jpg);
+        }
+        #features div
+        {
+            position: absolute;
+            left: 109px;
+            color: #595959;
+            font-size: 12px;
+        }
+        #f1
+        {
+            top: 78px;
+        }
+        #f2
+        {
+            top: 136px;
+        }
+        #f3
+        {
+            top: 194px;
+        }
+        #f4
+        {
+            top: 253px;
+        }
+        #f5
+        {
+            top: 309px;
+        }
+        #faq
+        {
+            position: absolute;
+            width: 647px;
+            height: 191px;
+            top: 620px;
+            left: 0;
+            background: url(images/index/faq.jpg);
+        }
+        #new_atcive
+        {
+            position: absolute;
+            padding-top: 44px;
+            top: 355px;
+            left: 0;
+            width: 320px;
+            height: 101px;
+            background: url(images/index/new_atcive.jpg) no-repeat;
+        }
+        .more
+        {
+            font-size: 12px;
+            position: absolute;
+            top: 15px;
+            left: 248px;
+        }
+        .more a
+        {
+            color: #78a700;
+            text-decoration: none;
+        }
+        #new_atcive li, #bbs_active li, #faq_left li
+        {
+            display: block;
+            width: 290px;
+            height: 22px;
+            background: url(images/index/list_node.jpg) no-repeat 12px 0;
+            color: #595959;
+            font-size: 12px;
+            list-style: none;
+            padding: 4px 0 0 30px;
+        }
+        #new_atcive li a, #bbs_active li a, #faq_left li a
+        {
+            color: #595959;
+            text-decoration: none;
+        }
+        #bbs_active
+        {
+            padding-top: 44px;
+            position: absolute;
+            top: 500px;
+            left: 0;
+            width: 320px;
+            height: 221px;
+            background: url(/images/index/bbs.jpg) no-repeat;
+        }
+        #coop
+        {
+	width: 839px;
+	height: 78px;
+	background: url(/images/index/coop.jpg) no-repeat;
+	position: relative;
+	padding-left: 300px;
+	padding-top: 7px;
+        }
+        #coop img
+        {
+	float: left;
+	margin-right: 30px;
+        }
+        #faq_left
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 10px;
+            top: 70px;
+        }
+        #faq_left
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 10px;
+            top: 70px;
+        }
+        #faq_right
+        {
+            position: absolute;
+            width: 276px;
+            height: 118px;
+            left: 400px;
+            top: 80px;
+            color: #595959;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #faq_right a
+        {
+            color: #595959;
+            font-size: 12px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body >
+    <div id="header">
+        <div id="nav_bar">
+            <ul>
+              <li id="index" class="active"><a href="index.html"></a></li>
+              <li id="sext" class="active"><a href="version.html"></a></li>
+              <li id="skin" class="active"><a href="help.pdf"></a></li>
+              <li id="lab" class="active"><a href="FAQ.html"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+      <div id="poster">
+<div id="download"><a href="version.html"></a></div>
+
+</div>
+      <div id="content">
+    <div id="left_content">
+              <div id="what_new"></div>
+</div>
+        <p>================================================<br />
+        关于该软件</p>
+            <p>本软件属于 香港城市大学 所有<br />
+              ================================================<br />
+        </p>
+        <p>版本	功能更新</p>
+            <p>v3.3	2017-1-17<br />
+              - 进一步支持Win10<br />
+              - 界面改进与优化</p>
+
+			   <b><a href="download/PCCCP_install_trial.msi">下载试用版(包含除语料训练和模板学习外的所有功能，使用次数为30) &gt;&gt;</a><br>
+			    <a href="download/PCCCP_install_free.msi">下载免费版(不包含 高级校订、词典管理、语料训练、模板学习) &gt;&gt;</a><br></b>
+<br />
+            <p>v3.2	2015-7-10<br />
+        - 支持Win8, Win8.1, Win10</p><br />
+            <p>v3.1	2013-01-11<br />
+              - 新增不同情况下的左右文本框随主窗口大小自动缩放和对齐<br />
+              - 部分控件随主窗口大小自动移动并对齐位置<br />
+              - 主窗口过小的情况下，自动恢复最小窗口大小以保证软件所有控件的可视性<br />
+              - 新增欢迎窗口的背景图片多语言支持<br />
+              - 更换原有欢迎窗口的文字为进度条<br />
+              - 修改&quot;关于该软件&quot;的文本语言默认为简体中文<br />
+              - 修改帮助文档默认为简体中文<br />
+              - 修正&ldquo;点&rdquo;、&ldquo;颜&rdquo;和&quot;产&quot;的繁简转换<br />
+              - 修改背景颜色透明，以在用户使用非默认背景颜色时自适应当前颜色<br />
+              - 修正&ldquo;莅&ldquo;和&rdquo;蒞&rdquo;的简繁转换</p><br />
+            <p>v3.0	2012-12-14<br />
+              - 新增试用版并可以注册成为专业版<br />
+              - 调整免费版、专业版功能限制<br />
+              - 更新软件帮助文档<br />
+              - 修改默认语言以及局部细节调整</p><br />
+            <p>v2.9	2012-08-21<br />
+              - 在繁体转简体下，增加选择字是一对多情况时的小窗口字符列表功能</p><br />
+            <p>v2.8	2012-08-11<br />
+              - 改进并完善中英文标鲇符号在各种情形下的转换<br />
+              - 顏色操作结束后，自动滚动到页面顶部<br />
+              - 添加搜索功能（可以对左侧、右侧独立搜索）<br />
+              - 微调转换模型，减少在一对多无左右搭配情况下转换错误问题<br />
+              - 增加丰富词库<br />
+              - 一对多和一对一情况下弹出窗口的下拉自动改变样式，以增强区分效果<br />
+              - 弹出转换窗口的样式进行调整，更方便易用，同时默认显示&ldquo;搜索&rdquo;、&ldquo;替换&rdquo;按钮 </p><br />
+            <p>v2.7	2012-05-10<br />
+              - 修改提交试用报告的用户介面<br />
+              - 增加提交试用报告介面的具体错误提示标识，取代之前的弹出窗口，使更贴近用户使用<br />
+              - 修正软件注册等介面标题的中英文转换<br />
+              - 增加用户在无内容时进行转换的错误提示标识</p><br />
+            <p>v2.6	2012-04-30<br />
+              - 更新语言包，右键菜单等自动进行语言切换<br />
+              - 弹出的提示信息增加图标，以增强提示信息的可见度<br />
+              - 菜单统一增加图标显示<br />
+              - 转换按钮设置为一个独立图标<br />
+              - 转换设置的属性修改为只读<br />
+              - 各个窗口统一设置了图标<br />
+              - 代码重新整理更合理化</p><br />
+            <p>v2.5	2012-03-20<br />
+              - 新增&ldquo;人名地名词典&rdquo;，同时增加至转换介面、词典管理介面、提示建议介面</p><br />
+            <p>v2.4	2012-02-01<br />
+              - 新增doc和docx格式的直接读取支持<br />
+              - 繁简转换增加&quot;繁简转换词典&quot;以解决繁简转换一对多情况<br />
+              - 更新繁简转换算法，加入反向搜索，替换一对一转换</p><br />
+            <p>v2.3	2011-11-18<br />
+              - 合并简到繁、繁到简为一个转换按钮，共享高级自切换菜单，使得更易操作、界面更简洁、代码更结构化<br />
+              - 更换繁体到简体的算法，避免因用户默认操作系统语言出现的乱码<br />
+              - 增加繁体到简体时的台湾字形库，使特殊字形也可以有效转换<br />
+              - 多语言提示的语言信息更加精准<br />
+              - 着色机制进行优化，修补在简到繁转换时，一对多在文字无区別的情况下，进行顏色提醒的问题<br />
+              - 增加建议提交，并与测试数据提交功能进行融合<br />
+              - 更新优化N-Gram、模板训练功能的代码<br />
+              - 修正在繁到简转换中，选择着色时出现步进模式的问题<br />
+              - 在词典管理中，增加对添加重复项的检查</p><br />
+            <p>v2.2	2011-11-15<br />
+              - 解决在特定情况下切换语言时控件位移的情况，实现任何使用操作环境下的多语言完美切换<br />
+              - 重构多语言的渲染和切换方式，不再影响用户现有输入框和操作内容<br />
+              - 加入软件注册验证及验证机制<br />
+              - 更换文本比较算法，节省存储空间并修补超大文件下出现的着色错误<br />
+              - 在大文件下（超过100000字符），系统自动提醒切换无格式、无顏色的转换，以加快转换速度<br />
+              - 可以快速处理英文字符，解决在中英文混合时候的快速准确转换<br />
+              - 解决特殊符号的繁简转换时出现的乱码<br />
+              - 词典管理的添加按钮增加用户提示功能<br />
+              - 修补词典重复添加、文本训练的重复文件添加出现的漏洞<br />
+              - 词典管理、模板、N-Gram窗口中，当无搜索结果时，弹出提示框并不再清空现有内容<br />
+              - 加入词典重载成功的提示信息<br />
+              - 修补少数一对多转换的弹出框中，无多个对应的繁体字出现在下拉框的情况<br />
+              - 软件注册验证修正为打开软件后进行，以提高启动速度<br />
+              - 加入了去除顏色按钮的多语言信息提示<br />
+              - 界面细节进行了局部调整</p><br />
+            <p>v2.1	2011-11-11<br />
+              - 对所有数据文件进行加密<br />
+              - 变更词典管理的数据显示方式，防止利用抓取工具来获取数据<br />
+              - 修正个人词典维护功能<br />
+              - 在高级校订模式下，增加对特定操作先搜索再替换功能<br />
+              - 安装程序增加卸载功能<br />
+              - 若干程序界面细节修正</p><br />
+            <p>v2.0	2011-11-06<br />
+              - 增加高级转换时新模式&ldquo;步进模式&rdquo;，可以自动引导逐个校订，并随时暂停和继续<br />
+              - 提高N-Gram词库计算和解析的效率，加快转换速度<br />
+              - 弹出框增加信息提示窗口（自动显示和隐藏），以提供当前转换的依据及转换历史<br />
+              - 优化重构着色机制<br />
+              - 繁体转简体增加标鲇转换功能<br />
+              - 增加用户报告发送功能<br />
+              - 左右同步定位功能，使得同时可以对比左右内容</p><br />
+            <p>v1.9	2011-11-01<br />
+              - 转换能完整保留用户输入文本的格式<br />
+              - 字体大小的设置<br />
+              - 整体界面进行大小改变，使用更舒适<br />
+              - 界面中部增加左侧收起按钮功能以增加高级模式下面的显示空间<br />
+              - 新增只转换中文标鲇<br />
+              - 整合所有标鲇转换功能至高级菜单<br />
+              - 右键菜单的多语言化<br />
+              - 高级编辑弹窗可以自由移动</p><br />
+            <p>v1.8	2011-10-5<br />
+              - 选择文本时，保持鼠标选中状态<br />
+              - 标鲇符号选择时，进行智能判断，可以独立转换也可以跟随用户当前设置进行自动转换<br />
+              - 多语言显示的代码优化</p><br />
+            <p>v1.7	2011-09-22<br />
+              - 修改新的帮助系统<br />
+              - 高级模式下，增加完成校订功能<br />
+              - 高级模式下，用户可以选择性去掉指定顏色<br />
+              - 代码优化</p><br />
+            <p>V1.6	2011-08-03<br />
+              - 增加标鲇符号转化功能<br />
+              - 增加高级模式下一对多的独立顏色显示<br />
+              - 自动模式下也可以批量修改<br />
+              - 高级模式下，一对多字可以自动识別并供用户选择转换目标</p><br />
+            <p>V1.5	2011-02-14<br />
+              - 高级模式选项改为下滑折叠菜单<br />
+              - 修改菜单加入快捷键<br />
+              - 高级模式的校订不在局限于词语，扩展为可校订任何字符，界面更简洁<br />
+              - 着色功能进行独立，可以单独着色或者去除顏色，用户不需要再次转换<br />
+              - 高级模式的弹出窗口，添加&ldquo;修改所有相同情况&rdquo;，增加在线搜索功能；<br />
+              - 增加完成校订功能<br />
+              - 词典管理中增加搜索、另存为功能<br />
+              - 增加词典载入和保存时的冗余处理<br />
+              - 增加香港地区常用词表；增加词典选择的互斥性<br />
+              - 加入一对多统计功能<br />
+              - 增加N-Gram训练功能；加入多语料批量处理功能；加入语料二次处理<br />
+              - 实现office 2010简繁转换，用做测试对比<br />
+              - 进行大量代码级功能优化</p><br />
+            <p>V1.4	2011-01-08<br />
+              - 实现基于关键字的最大搜索匹配模型<br />
+              - 增加用户高级转换模式的设定<br />
+              - 增加转换结果的对比分析（可以用作转换结果的评测）<br />
+              - 一些用户易用性细节的提高<br />
+              - 增加系统的使用说明</p><br />
+            <p>V1.3	2011-12-22<br />
+              - 增加多语言的管理界面（简体、繁体、英文）<br />
+              - 建立根据数据源优先级进行依次搜索的模式<br />
+              - 增加《两岸IT常用术语对照表》以及对应程序接口</p><br />
+            <p>V1.2	2011-12-02<br />
+              - 增加繁简转换功能模块<br />
+              - 增加高级模式下，个人词典的添加<br />
+              - 增加《汉语大辞典》对应一对多部分的数据源</p><br />
+            <p>V1.1	2010-11-10<br />
+              - 建立基本系统转换UI<br />
+              - 整理《简化字总表》和《简繁互转易错字辨析》<br />
+              - 多数据源的管理<br />
+              - 实现基本的多源数据搜索匹配<br />
+              - 实现简繁转换的个人词典</p><br />
+            <p><br />
+            </p>
+      </div>
+        <div id="coop">
+          <p><a href="http://www.cityu.edu.hk"
+                        target="_blank"><img src="images/index/logo_cityu_home.png" width="95" height="41" style="width: 90px;" /></a><a href="http://www.cityu.edu.hk/class/" target="_blank"><img src="images/index/CLASS.gif" width="166" height="30"></a><a href="http://ctl.cityu.edu.hk/"
+                    target="_blank"><img src="images/index/CTL.gif" width="130" height="34"></a></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+</body>
+</html>
