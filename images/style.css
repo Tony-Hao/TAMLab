@@ -6,8 +6,8 @@ body{background-color:#e6e9ea;font-family:Arial;}
 .logo{padding:20px 30px 0px 50px;}
 
 menu{position:relative;margin:17px 0 5px;padding:10px 40px 10px 40px;border-top:4px solid;border-color:#2c6bb8;background-color:#d1e7ff;height:37px}
-menu a {color:black;float: left;display: block;text-decoration: none;line-height: 20px;padding: 0 1.9em;}
-menu a:hover {background-color:#CF0;padding-right: 1.9em;text-decoration: none;}
+menu a {color:black;float: left;display: block;text-decoration: none;line-height: 20px;padding: 0 1.6em;}
+menu a:hover {background-color:#CF0;padding-right: 1.6em;text-decoration: none;}
 
 .banner{position:relative;margin:10px 0 0px;padding:20px 40px 15px 40px;border-top:4px solid;border-color:#2c6bb8;background-color:#d1e7ff;}
 .banner p{margin:0 0 7px;}
